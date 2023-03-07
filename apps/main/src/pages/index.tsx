@@ -20,13 +20,13 @@ const StudentPage = () => {
       img: TeacherImg,
       name: "선생님 페이지",
       content: "회사와 학생을 관리하여 업무부담을 줄여보세요!",
-      link: "https://teacher.info-dsm.info/",
+      link: "https://teacher.info-dsm.info/login/",
     },
     {
       img: CompanyImg,
       name: "기업 페이지",
       content: "회사를 등록해서 모집공고를 올려보세요!",
-      link: "https://company.info-dsm.info/",
+      link: "https://company.info-dsm.info/login/",
     },
   ];
   return (
