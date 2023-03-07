@@ -1,0 +1,121 @@
+{
+  "name": "desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./electron/main.js",
+  "homepage": "./",
+  "dependencies": {
+    "@tanstack/react-query": "^4.20.4",
+    "@tanstack/react-query-devtools": "^4.20.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.10",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@types/styled-components": "^5.1.26",
+    "electron-is-dev": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
+    "react-scripts": "5.0.1",
+    "recoil": "^0.7.6",
+    "styled-components": "^5.3.6",
+    "typescript": "^4.9.4",
+    "web-vitals": "^2.1.4",
+    "ui": "*"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "start-renderer": "cross-env BROWSER=none yarn react-start",
+    "start-main": "electron .",
+    "trace": "electron --trace-warnings .",
+    "compile-main": "tsc ./electron/main.ts",
+    "start-main-after-renderer": "wait-on http://localhost:3000 && npm run start-main",
+    "dev": "yarn start && yarn start-main-after-renderer",
+    "pack": "yarn compile-main && yarn react-build && electron-builder --dir",
+    "build": "yarn compile-main && npm run react-build && electron-builder build",
+    "build:osx": "yarn build -- --mac",
+    "build:linux": "yarn build -- --linux",
+    "build:win": "yarn run build -- --win",
+    "predist": "npm run compile-main"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "eslint-config-custom": "*",
+    "wait-on": "^7.0.1",
+    "tsconfig": "*"
+  },
+  "build": {
+    "productName": "INFO",
+    "appId": "",
+    "asar": true,
+    "protocols": {
+      "name": "INFO",
+      "schemes": [
+        "INFO"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ]
+    },
+    "dmg": {
+      "title": "tournant"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false,
+      "installerLanguages": [
+        "en_US",
+        "ko_KR"
+      ],
+      "language": "1042"
+    },
+    "directories": {
+      "output": "dist/",
+      "app": "."
+    }
+  }
+}

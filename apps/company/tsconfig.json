@@ -1,0 +1,13 @@
+{
+  "extends": "tsconfig/nextjs.json",
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "@types"]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "public/assets/index.ts",
+    "../../packages/ui/images/Confirm.tsx"
+  ]
+}

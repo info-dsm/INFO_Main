@@ -1,0 +1,15 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "include": [
+    ".",
+    "../../apps/web/public/assets/index.ts",
+    "../../apps/web/src/lib/components/Background.tsx"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2015", "DOM"],
+    "module": "ESNext",
+    "target": "es6"
+  },
+  "exclude": ["dist", "node_modules"]
+}
