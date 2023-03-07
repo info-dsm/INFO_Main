@@ -45,6 +45,12 @@ export default function App({ Component, pageProps }: AppProps) {
                 <meta name="robots" content="index, follow" />
                 <meta charSet="UTF-8" />
                 <meta http-equiv="Subject" content="취업지원서비스" />
+                <meta
+                  http-equiv="refresh"
+                  content="revealtrans(Duration=1, Transition=12)"
+                />
+                <meta http-equiv="Distribution" content="info" />
+                <meta http-equiv="Copyright" content="info" />
               </Head>
               <Component {...pageProps} />
             </CustomThemeProvider>
