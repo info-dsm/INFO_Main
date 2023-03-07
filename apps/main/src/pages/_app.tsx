@@ -38,6 +38,10 @@ export default function App({ Component, pageProps }: AppProps) {
                   name="viewport"
                   content="width=device-width, initial-scale=1"
                 />
+                <meta
+                  name="Keywords"
+                  content="info, 취업관리서비스, 대덕소프트웨어마이스터고등학교, 대마고info, 대마고 취업지원, 대마고 취업"
+                />
               </Head>
               <Component {...pageProps} />
             </CustomThemeProvider>
