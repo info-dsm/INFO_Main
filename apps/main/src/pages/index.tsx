@@ -6,6 +6,7 @@ import StudentImg from "/public/assets/images/student.png";
 import CompanyImg from "/public/assets/images/company.png";
 import TeacherImg from "/public/assets/images/teacher.png";
 import Link from "next/link";
+import Head from "next/head";
 
 const StudentPage = () => {
   const select = [
@@ -30,6 +31,14 @@ const StudentPage = () => {
   ];
   return (
     <>
+      <Head>
+        <title>info 통합페이지</title>
+        <meta name="title" content="info 통합페이지" />
+        <meta
+          name="description"
+          content="서비스를 클릭하시면 해당 서비스에 들어가실 수 있습니다."
+        />
+      </Head>
       <MainDiv>
         <Title>What is INFO</Title>
         <hr />
