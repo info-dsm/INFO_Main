@@ -29,7 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
             <CustomThemeProvider>
               <Head>
                 <title>info</title>
-                <meta name="description" content="teacher page by info" />
+                <meta name="title" content="info" />
+                <meta
+                  name="description"
+                  content="대덕소프트웨어마이스터고등학교의 취업관리서비스입니다."
+                />
                 <meta
                   name="viewport"
                   content="width=device-width, initial-scale=1"
