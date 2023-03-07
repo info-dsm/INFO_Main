@@ -42,6 +42,9 @@ export default function App({ Component, pageProps }: AppProps) {
                   name="Keywords"
                   content="info, 취업관리서비스, 대덕소프트웨어마이스터고등학교, 대마고info, 대마고 취업지원, 대마고 취업"
                 />
+                <meta name="robots" content="index, follow" />
+                <meta charSet="UTF-8" />
+                <meta http-equiv="Subject" content="취업지원서비스" />
               </Head>
               <Component {...pageProps} />
             </CustomThemeProvider>
