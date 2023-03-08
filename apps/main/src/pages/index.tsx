@@ -46,7 +46,7 @@ const StudentPage = () => {
           {select.map((e) => (
             <Select>
               <ImageDiv>
-                <Image src={e.img} alt="" />
+                <Image src={e.img} alt="" priority={true} />
               </ImageDiv>
               <hr />
               <div>{e.name}</div>
@@ -59,7 +59,7 @@ const StudentPage = () => {
         </SelectContainer>
       </MainDiv>
       <Background>
-        <Image src={BackgroundImg} alt="" />
+        <Image src={BackgroundImg} alt="" priority={true} />
       </Background>
     </>
   );
