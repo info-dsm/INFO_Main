@@ -14,7 +14,7 @@ const StudentPage = () => {
       img: StudentImg,
       name: "학생 페이지",
       content: "자신이 지원할 회사나 모집공고를 살펴보세요!",
-      link: "https://student.info-dsm.info/",
+      link: "https://student.info-dsm.info/auth/login/",
     },
     {
       img: TeacherImg,
